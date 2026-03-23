@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Aplikasi Notes</h1>
+
+        <div class="card form-card">
+            <h2 id="form-title">Tambah Catatan</h2>
+            <form id="note-form">
+                <input type="hidden" id="note-id">
+                <label for="judul">Judul</label>
+                <input type="text" id="judul" placeholder="Judul catatan..." required>
+                <label for="isi">Isi</label>
+                <textarea id="isi" rows="4" placeholder="Isi catatan..." required></textarea>
+                <div class="form-buttons">
+                    <button type="submit" id="save-btn" class="btn btn-save">Simpan</button>
+                    <button type="button" id="cancel-btn" class="btn btn-cancel" style="display:none;">Batal</button>
+                </div>
+            </form>
+        </div>
+
+        <h2>Daftar Catatan <span id="note-count" class="count">(0)</span></h2>
+        <div id="notes-list"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
