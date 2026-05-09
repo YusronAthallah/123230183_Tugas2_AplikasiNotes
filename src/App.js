@@ -18,7 +18,8 @@ function App() {
   const fetchNotes = async () => {
     try {
       const res = await axios.get(API_URL);
-      setNotes(res.data);
+      // PERBAIKAN 1: Tambahkan .data lagi untuk mengambil array dari dalam JSON backend
+      setNotes(res.data.data); 
     } catch (error) {
       console.error('Error fetching notes:', error);
     }
@@ -65,6 +66,9 @@ function App() {
     setEditId(null);
   };
 
+  // Tambahkan pengecekan agar tidak error jika notes ternyata undefined/null
+  const notesCount = Array.isArray(notes) ? notes.length : 0;
+
   return (
     <div className="container">
       <h1>Aplikasi Notes</h1>
@@ -104,17 +108,18 @@ function App() {
       </div>
 
       <h2>
-        Daftar Catatan <span className="count">({notes.length})</span>
+        Daftar Catatan <span className="count">({notesCount})</span>
       </h2>
       <div id="notes-list">
-        {notes.length === 0 ? (
+        {notesCount === 0 ? (
           <p className="empty-msg">Belum ada catatan.</p>
         ) : (
           notes.map((note) => (
             <div className="note-item" key={note.id}>
               <h3>{note.judul}</h3>
               <div className="note-date">
-                {new Date(note.tanggal_dibuat).toLocaleDateString('id-ID', {
+                {/* PERBAIKAN 2: Ubah tanggal_dibuat menjadi createdAt bawaan Sequelize */}
+                {new Date(note.createdAt).toLocaleDateString('id-ID', {
                   day: 'numeric',
                   month: 'long',
                   year: 'numeric',
