@@ -2,6 +2,7 @@
 const express = require("express");
 const sequelize = require("./config/database");
 const userRoutes = require("./routes/userRoutes");
+const noteRoutes = require("./routes/noteRoutes");
 
 // Inisialisasi Express dan Cors
 const app = express();
@@ -33,6 +34,8 @@ app.get("/", (req, res) => {
 // Setting Routes
 require("./schema/User"); // Untuk generate Tabel Users
 app.use("/api/v1/users", userRoutes); // Untuk setting routes user
+app.use("/api/notes", noteRoutes); // Ini yang akan menangani URL be-tugas3.../api/notes
+app.use("/api/v1/users", userRoutes);
 
 // Sync Database dan Jalankan Server
 const port = process.env.PORT || 3000;
