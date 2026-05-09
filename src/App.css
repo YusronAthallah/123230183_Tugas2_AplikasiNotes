@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 1.8rem;
+}
+
+h2 {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.count {
+    font-weight: normal;
+    color: #888;
+    font-size: 1rem;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.form-card {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+    margin-top: 12px;
+    font-size: 0.9rem;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4a90d9;
+}
+
+.form-buttons {
+    margin-top: 16px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.btn-save {
+    background: #4a90d9;
+    color: #fff;
+}
+
+.btn-save:hover {
+    background: #3a7bc8;
+}
+
+.btn-cancel {
+    background: #ccc;
+    color: #333;
+}
+
+.btn-cancel:hover {
+    background: #bbb;
+}
+
+.btn-edit {
+    background: #f0ad4e;
+    color: #fff;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+}
+
+.btn-edit:hover {
+    background: #ec971f;
+}
+
+.btn-delete {
+    background: #d9534f;
+    color: #fff;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+}
+
+.btn-delete:hover {
+    background: #c9302c;
+}
+
+.note-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.note-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.note-date {
+    font-size: 0.8rem;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+.note-body {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    white-space: pre-wrap;
+    line-height: 1.5;
+}
+
+.note-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.empty-msg {
+    text-align: center;
+    padding: 30px;
+    color: #999;
+}
