@@ -1,1 +1,1 @@
-export const BASE_URL = "https://be-if-d-834907213678.us-central1.run.app/";
+export const BASE_URL = "https://be-tugas3-tcc-183-385639935267.us-central1.run.app/";
